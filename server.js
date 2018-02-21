@@ -4,22 +4,48 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var articles={
+    
+        articleone : {
+          title: 'Article one | Kamran Khan',
+          heading: 'Article One',
+          date :'Feb 19, 2018',
+          content: ` <p>
+                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.and i am 
+                                    new here..and also i am learning java script....wow
+                    </p>
+                        <p>
+                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                                </p>
+                              <p>
+                            This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                                       </p> `
+        },
+        
+        articletwo : 
+        {
+          title: 'Article one | Kamran Khan',
+          heading: 'Article One',
+          date :'Feb 19, 2018',
+          content: ` <p>
+                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.and i am 
+                                    new here..and also i am learning java script....wow
+                    </p>`
+                        
+            },
 
-var articleone= {
-  title: 'Article one | Kamran Khan',
-  heading: 'Article One',
-  date :'Feb 19, 2018',
-  content: ` <p>
-                This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.and i am 
-                            new here..and also i am learning java script....wow
-            </p>
-                <p>
-                This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                        </p>
-                      <p>
-                    This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                               </p> `
-};
+        articlethree :
+        { 
+         title: 'Article one | Kamran Khan',
+          heading: 'Article One',
+          date :'Feb 19, 2018',
+          content: `  <p>
+                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.and i am 
+                                    new here..and also i am learning java script....wow`
+                    </p>
+        }
+        
+};        
 
 function createTemplate (data) {
     var title= data.title;
