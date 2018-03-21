@@ -7,6 +7,24 @@
         <div class="center">
             <img id='madi' src="/ui/madi.png" class="img-medium"/>
         </div>
+
+        
+    <div id="searchbox">
+        
+    </div>
+<div id="hits"></div>
+
+<script>
+  const { searchBox, hits } = instantsearch.widgets;
+  search.addWidget(searchBox({ container: "#searchbox" }));
+  search.addWidget(hits({ container: '#hits' }));
+  search.start();
+</script>
+
+        
+        
+        
+    
         <br>
         <div id="main-text"  class="center text-big bold">
             Hi! I am Kamran and this is my new app..buddy....
