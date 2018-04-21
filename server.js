@@ -123,6 +123,15 @@ app.get('/ui/myblog.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'myblog.html'));
 });
 
+var names=[];
+app.get('/submit-name', function(req,res)
+{
+    
+    //Get the  current name from request object
+    var name; //To Do
+     names.push(name);
+     res.send(names);  // to do 
+});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
