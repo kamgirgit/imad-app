@@ -42,7 +42,21 @@ var articles={
                     </p> `
         }
         
-};        
+};   
+
+var names=[];
+app.get('/submit-name/:name', function(req,res)  //URL: /submit-name?name=xxxx
+{
+    
+    //Get the  current name from request object
+   var name= req.params.name;    //To Do
+//    var name= req.query.name;
+    
+     names.push(name);
+     
+     //JSON javascript object notation
+     res.send(JSON.stringify(names));      // to do 
+});
 
 function createTemplate (data) {
     var title= data.title;
@@ -95,20 +109,6 @@ app.get('/counter', function(req,res)
 {
     counter+=1;
     res.send(counter.toString());
-});
-
-var names=[];
-app.get('/submit-name/:name', function(req,res)  //URL: /submit-name?name=xxxx
-{
-    
-    //Get the  current name from request object
-   var name= req.params.name;    //To Do
-//    var name= req.query.name;
-    
-     names.push(name);
-     
-     //JSON javascript object notation
-     res.send(JSON.stringify(names));      // to do 
 });
 
 
