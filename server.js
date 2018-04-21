@@ -128,9 +128,12 @@ app.get('/submit-name', function(req,res)
 {
     
     //Get the  current name from request object
-    var name; //To Do
+    var name= req.params.name;    //To Do
+    
      names.push(name);
-     res.send(names);  // to do 
+     
+     //JSON javascript object notation
+     res.send(JSON.stringify(names));      // to do 
 });
 
 
