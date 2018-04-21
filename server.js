@@ -124,7 +124,7 @@ app.get('/ui/myblog.html', function (req, res) {
 });
 
 var names=[];
-app.get('/submit-name', function(req,res)
+app.get('/submit-name/:name', function(req,res)
 {
     
     //Get the  current name from request object
