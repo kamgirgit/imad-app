@@ -98,7 +98,7 @@ app.get('/counter', function(req,res)
 });
 
 var names=[];
-app.get('/submit-name/:name', function(req,res)  //submit-name?-xxxx
+app.get('/submit-name/:name', function(req,res)  //URL: /submit-name?name=xxxx
 {
     
     //Get the  current name from request object
