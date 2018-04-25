@@ -13,45 +13,7 @@ var config=
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
-    
-        'article-one' : {
-          title: 'Article One | Kamran Khan',
-          heading: 'Article One',
-          date :'Feb 19, 2018',
-          content: ` <p>
-                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.and i am 
-                                    new here..and also i am learning java script....wow
-                    </p>
-                        <p>
-                        This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                                </p>
-                              <p>
-                            This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                                       </p> `
-        },
-        
-        'article-two' : {
-          title: 'Article Two | Kamran Khan',
-          heading: 'Article Two',
-          date :'Feb 20, 2018',
-          content: ` <p>
-                        This is the content for my second article.This is the content for my fsecond article. This is the content for my first article. This is the content for my second  article. This is the content for my first article.and i am 
-                                    new here..and also i am learning java script....wow
-                    </p>`
-                        
-            },
 
-        'article-three' :{ 
-         title: 'Article Three | Kamran Khan',
-          heading: 'Article Three',
-          date :'Feb 21, 2018',
-          content: `  <p>
-                        This is the content for my third article...wow 
-                    </p> `
-        }
-        
-};   
 
 var names=[];
 app.get('/submit-name', function(req,res)  //URL: /submit-name?name=xxxx
