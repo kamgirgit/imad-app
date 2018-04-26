@@ -80,7 +80,7 @@ function createTemplate (data) {
        if(err) {
            res.status(500).send(err.toString());
        } else {
-           res.send(JSON.stringyfy(result.rows));
+           res.send(JSON.stringify(result.rows));
        }
     });
  });
