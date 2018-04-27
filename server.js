@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool= require('pg').Pool;
-var crypto=require('crypto');
+const crypto=require('crypto');
 var config= 
 {
   user: 'kamranjmi12',
@@ -74,7 +74,7 @@ function createTemplate (data) {
  function hash(input, salt)
  {
      //How do we create a hash ?
-     var hashed = crypto.pbkdf2(input, salt, 10000, 512, 'sha512');
+     const hashed = crypto.pbkdf2(input, salt, 10000, 64, 'sha512');
      return hashed.toString('hex');
  }
  app.get('/hash/:input', function(req,res)
