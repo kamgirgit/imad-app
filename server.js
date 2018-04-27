@@ -75,7 +75,13 @@ function createTemplate (data) {
  {
      //How do we create a hash ?
      var hashed = crypto.pbkdf2Sync(input, salt, 10000, 64, 'sha512');
-     return hashed.toString('hex');
+     return["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
+     
+     // algorithm: md5
+     //"password" => jkjsaskjkjas67agshas5ts    it can be reverse engineered
+     //"password-this-is-a-random string" => asasvavsgsvgsbwbhghw565sdsdvsdsdstdsdv    it cant be reverse engineered
+     
+     // "password" => "password-this-is-a-random-string salt" => <hash> => <hash> x 10K times
  }
  app.get('/hash/:input', function(req,res)
  {
