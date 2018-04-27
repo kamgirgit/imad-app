@@ -159,6 +159,12 @@ function createTemplate (data) {
      
  });
 
+app.get('/logout',function(req,res)
+{
+   delete req.session.auth; 
+   res.send('Logged out');
+});
+
  var pool= new Pool(config);
  app.get('/test-db', function(req,res)
  {
